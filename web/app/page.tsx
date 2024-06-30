@@ -14,7 +14,7 @@ export const metadata = generateMetadata({
 /**
  * Axios to fetch ETH-USD price
  */
-export async function fetchEthPrice() {
+async function fetchEthPrice() {
   const res = await axios.get('https://api.coinbase.com/v2/prices/ETH-USD/spot');
   const ethPrice = res.data.data.amount;
   return ethPrice;

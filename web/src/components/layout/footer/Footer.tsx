@@ -31,7 +31,7 @@ export default function Footer() {
                   className="underline"
                   target="_blank"
                 >
-                  LICENSE.md
+                  LICENSE
                 </NextLink>{' '}
                 file for details
               </p>
