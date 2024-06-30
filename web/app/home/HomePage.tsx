@@ -11,7 +11,7 @@ import {box, box2} from '@/components/layout/style'
  * HomePage
  * 
  */
-export default function HomePage({ ethPrice }) {
+const HomePage = ({ ethPrice }: { ethPrice: string }) => {
   const account = useAccount();
 
   /* useBalance, used according to https://wagmi.sh/react/api/hooks/useBalance documentation */
@@ -94,3 +94,5 @@ export default function HomePage({ ethPrice }) {
     </>
   );
 }
+
+export default HomePage;
