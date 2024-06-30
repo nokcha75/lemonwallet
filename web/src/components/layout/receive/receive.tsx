@@ -16,6 +16,8 @@ export default function Receive({ pageName, pageUrl }: ReceiveProps) {
   const [copy, setCopy] = useState(true);
   const [copied, setCopied] = useState(false);
 
+  const url2 = `https://basescan.org/address/${account.address}`
+
   /* Copy to clipboard function, based on docs from https://dev.to/darkmavis1980/the-navigator-clipboard-api-in-javascript-38gn */
   const copyAddress = () => {
     navigator.clipboard.writeText(account.address).then(
@@ -67,7 +69,15 @@ export default function Receive({ pageName, pageUrl }: ReceiveProps) {
       </section>
       <div style={box2}>
         <h3 className="text-lg">
+          <a
+              href={url2}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lg no-underline"
+              aria-label="lw"
+            >
           Transactions
+          </a>
         </h3>
       </div>
     </>

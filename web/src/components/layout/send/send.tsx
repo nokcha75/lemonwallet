@@ -1,5 +1,6 @@
 import NextLink from 'next/link';
 import InputBox from './input';
+import { useAccount } from 'wagmi';
 import { ChevronLeftIcon } from '@radix-ui/react-icons';
 import {box, box2} from '@/components/layout/style'
 
@@ -9,6 +10,10 @@ type SendProps = {
   };
 
 export default function Send({ pageName, pageUrl }: SendProps) {
+  const account = useAccount();
+
+  const url2 = `https://basescan.org/address/${account.address}`
+
   return (
     <>
       <section style={box}>
@@ -32,7 +37,15 @@ export default function Send({ pageName, pageUrl }: SendProps) {
       </section>  
       <div style={box2}>
         <h3 className="text-lg">
-          Transactions
+          <a
+              href={url2}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lg no-underline"
+              aria-label="lw"
+            >
+            Transactions
+          </a>
         </h3>
       </div>
     </>
