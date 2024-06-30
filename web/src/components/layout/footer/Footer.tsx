@@ -27,7 +27,7 @@ export default function Footer() {
               <p className="text-base font-normal leading-7 text-boat-footer-light-gray">
                 MIT License - {' '}
                 <NextLink
-                  href="https://github.com/coinbase/build-onchain-apps/blob/main/LICENSE.md"
+                  href="https://github.com/nokcha75/lemonwallet/blob/main/LICENSE"
                   className="underline"
                   target="_blank"
                 >
